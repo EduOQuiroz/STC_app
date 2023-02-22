@@ -1,0 +1,9 @@
+require("@babel/register");
+module.exports =  {
+  'config': 'server/src/db/config/config.js',
+  'models-path':'server/src/db/models',
+  'seeders-path':'server/src/db/seeders',
+  'migrations-path':'server/src/db/migrations',
+};
+
+

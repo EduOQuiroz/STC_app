@@ -1,0 +1,261 @@
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../fonts/ubuntu-regular.woff2') format('woff2'),
+		url('../fonts/ubuntu-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	color: #000;
+	font-family: 'Ubuntu';
+	margin:0 auto;
+  padding:0;
+}
+header{
+	background-color: #02242c;
+	background-image: linear-gradient(#02242c, #195d6e);
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	position: relative;
+}
+select{
+	appearance: none;
+	min-width: 370px;
+	font-family: 'Ubuntu';
+	font-size: 18px;
+	background-color: #0d0f27;
+	color: #c0a9a9;
+	text-align: center;
+	border-radius:10px	;
+	-webkit-border-radius:10px	;
+	-moz-border-radius:10px	;
+	-ms-border-radius:10px	;
+	-o-border-radius:10px	;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+}
+select::-webkit-scrollbar{
+	background-color: #02313d;
+	width: 5px;
+}
+select::-webkit-scrollbar-thumb{
+	background-color: rgba(61, 2, 56, 0.486);
+	border-radius: 25%;
+	-webkit-border-radius: 25%;
+	-moz-border-radius: 25%;
+	-ms-border-radius: 25%;
+	-o-border-radius: 25%;
+}
+select:hover{
+	color:#04bdeb;
+	background-color: #02313d;
+	transform: scale(.9);
+	-webkit-transform: scale(.9);
+	-moz-transform: scale(.9);
+	-ms-transform: scale(.9);
+	-o-transform: scale(.9);
+}
+option{
+	background-color: #0d0f27;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+option:hover{
+	background-color: #02313d;
+}
+.map-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #02313d;
+	background-image: linear-gradient(#195d6e ,#02242c,#01151a);
+	height: 90vh;
+}
+.leaflet-control, .leaflet-touch .leaflet-control-zoom-in,.leaflet-touch .leaflet-control-zoom-out{
+	background-color: #02313d;
+	color:white;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+}
+.leaflet-touch .leaflet-control-zoom-out:hover, .leaflet-touch .leaflet-control-zoom-in:hover,.leaflet-control:hover {
+	background-color: #045b70;
+	color: white;
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+.leaflet-bar a.leaflet-disabled{
+	display: none;
+}
+.leaflet-bar a{
+	border: none;
+}
+.leaflet-popup-content-wrapper{
+	font-family: 'Ubuntu';
+	font-size: 15px;
+	color: white;
+	background-color: #02313d;
+	text-align: center;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+}
+.leaflet-popup-content-wrapper:hover, a.leaflet-popup-close-button{
+	font-family: 'Ubuntu';
+	font-size: 15px;
+	color: white;
+	background-color: #03495a;
+	text-align: center;
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+}
+
+
+.leaflet-container a.leaflet-popup-close-button:hover{
+ color:#ff1e00
+}
+#map {
+	width: 90vw;
+	height: 80vh;
+	box-shadow: inset;
+	position: static;
+	margin: 0 0;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.linea-A{
+	stroke: #a904eb
+}
+.linea-B{
+	stroke: #44ac66
+}
+.linea-01{
+	stroke: #eb04a6
+}
+.linea-02{
+	stroke: #0a2cc4
+}
+.linea-03{
+	stroke: #92ac35
+}
+.linea-04{
+	stroke: #04bdeb
+}
+.linea-05{
+	stroke: #ffee00
+}
+.linea-06{
+	stroke: #eb0404
+}
+.linea-07{
+	stroke: #eb8704
+}
+.linea-08{
+	stroke: #25a32f
+}
+.linea-09{
+	stroke: #812003
+}
+.linea-12{
+	stroke: #cebd2b
+}
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  border-color: #fbff00 transparent #fbff00 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader{
+	background-color: #192661;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	clip-path: circle(150% at 100% 0);
+	transition: clip-path 0.8s ease-in-out;
+	-webkit-transition: clip-path 0.8s ease-in-out;
+	-moz-transition: clip-path 0.8s ease-in-out;
+	-ms-transition: clip-path 0.8s ease-in-out;
+	-o-transition: clip-path 0.8s ease-in-out;
+}
+.loader2{
+	clip-path: circle(0% at 100% 0);
+}
+.logo{
+	height: 70px;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	transition: all 1.5s ease-in-out;
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+}
+.logo:hover{
+	transform: rotateY(365deg)  scale(.5);
+	-webkit-transform: rotateY(365deg)  scale(.5);
+	-moz-transform: rotateY(365deg)  scale(.5);
+	-ms-transform: rotateY(365deg)  scale(.5);
+	-o-transform: rotateY(365deg)  scale(.5);
+}
+.leaflet-marker-icon.leaflet-interactive:hover{
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}

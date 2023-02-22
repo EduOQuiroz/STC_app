@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: kartoza/postgis:15-3.3
+    environment:
+      - POSTGRES_DB=movilidad_cdmx
+      - POSTGRES_USER=eduoq
+      - POSTGRES_PASSWORD=Edujs0606_
+      - POSTGRES_MULTIPLE_EXTENSIONS=postgis,hstore,postgis_topology,postgis_raster,pgrouting
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=paincore.px@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=Edujs0606_
+    ports:
+      - 5050:80
