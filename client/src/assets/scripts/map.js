@@ -10,13 +10,10 @@ import stcMetro from '@images/stc-metro.png';
 
 const map = createMap({
 	container: 'map',
-	layer: tileLayers.baseLayers.stadia.map.AlidadeSmoothDark ,
-	attribution: tileLayers.baseLayers.stadia.atribution,
+	layer: tileLayers.baseLayers.thunderForest.map.transportDark,
+	attribution: tileLayers.baseLayers.thunderForest.atribution,
 });
 
-const stadiaDark = L.tileLayer(tileLayers.baseLayers.stadia.map.AlidadeSmoothDark,{
-	attribution: tileLayers.baseLayers.stadia.atribution,
-})
 const tfAtlas = L.tileLayer(tileLayers.baseLayers.thunderForest.map.mobileAtlas,{
 	attribution: tileLayers.baseLayers.thunderForest.atribution,
 	maxZoom: 17,
@@ -43,7 +40,6 @@ cycle: cycleMap
 const baseLayers = {
 	TransportDarkTF: tfTransportDark,
 	thunderForestAtlas : tfAtlas,
-	StadiaDark: stadiaDark,
 	Voyager: voyager,
 	OSM: OSM,
 	GoogleMaps: capaGMaps,
